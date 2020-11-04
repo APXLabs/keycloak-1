@@ -2417,7 +2417,8 @@ module.directive('kcNoReservedChars', function (Notifications, $translate) {
             var keyPressed = String.fromCharCode(event.which || event.keyCode || 0);
             
             // ] and ' can not be used inside a character set on POSIX and GNU
-            if (keyPressed.match('[:/?#[@!$&()*+,;=]') || keyPressed === ']' || keyPressed === '\'') {
+//            if (keyPressed.match('[:/?#[@!$&()*+,;=]') || keyPressed === ']' || keyPressed === '\'') {
+            if (keyPressed.match('[/?#[@!$&()*+,;=]') || keyPressed === ']' || keyPressed === '\'') {
                 event.preventDefault();
                 $scope.$apply(function() {
                     Notifications.warn($translate.instant('key-not-allowed-here', {character: keyPressed}));
