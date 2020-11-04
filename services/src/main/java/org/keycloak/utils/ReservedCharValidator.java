@@ -27,7 +27,10 @@ public class ReservedCharValidator {
     protected static final Logger logger = Logger.getLogger(ReservedCharValidator.class);
     
     // https://tools.ietf.org/html/rfc3986#section-2.2
-    private static final String[] RESERVED_CHARS = { ":", "/", "?", "#", "[", "@", "!", "$", 
+/*    private static final String[] RESERVED_CHARS = { ":", "/", "?", "#", "[", "@", "!", "$", 
+                                                   "&", "(", ")", "*", "+", ",", ";", "=", 
+                                                   "]", "[", "\\" };*/
+    private static final String[] RESERVED_CHARS = { "/", "?", "#", "[", "@", "!", "$", 
                                                    "&", "(", ")", "*", "+", ",", ";", "=", 
                                                    "]", "[", "\\" };
     private ReservedCharValidator() {}
