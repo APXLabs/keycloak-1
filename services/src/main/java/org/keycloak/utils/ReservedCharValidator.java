@@ -31,7 +31,7 @@ public class ReservedCharValidator {
     protected static final Logger logger = Logger.getLogger(ReservedCharValidator.class);
     
     // https://tools.ietf.org/html/rfc3986#section-2.2
-    private static final Pattern RESERVED_CHARS_PATTERN = Pattern.compile("[:/?#@!$&()*+,;=\\[\\]\\\\]");
+    private static final Pattern RESERVED_CHARS_PATTERN = Pattern.compile("[/?#@!$&()*+,;=\\[\\]\\\\]");
 
     // KEYCLOAK-14231 - Supported Locales: Three new characters were added on top of this RFC: "{", "}", "%"
     private static final Pattern RESERVED_CHARS_LOCALES_PATTERN = Pattern.compile("[:/?#@!$&()*+,;=\\[\\]\\\\{}%]");
